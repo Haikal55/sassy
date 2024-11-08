@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FAEBD7;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #800020;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    flex-direction: column;
+}
+
+h2 {
+    margin-bottom: 20px;
+    margin-top: 60px;
+    font-size: 2em;
+}
+
+#home {
+    background: url('/assets/img/Home.png') center/cover no-repeat;
+}
+
+#about {
+    background-color: #FAEBD7;
+}
+
+#app {
+    background: url('/assets/img/about.png') center/cover no-repeat;
+}
+
+#workcloud {
+    background-color: #FAEBD7;
+}
+
+#team {
+    background: url('/assets/img/transparent.png') center/cover no-repeat;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: #333;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+.logo img {
+    width: 150px;
+    height: auto;
+}
+
+.navbar {
+    display: flex;
+    gap: 15px;
+}
+
+.navbar a {
+    color: #333;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+}
+
+.hamburger {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+.hamburger.active .bar1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.active .bar2 {
+    opacity: 0;
+}
+
+.hamburger.active .bar3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: rgba(255, 255, 255, 0.9);
+        padding: 15px;
+        border-radius: 5px;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-content img {
+        max-width: 100%;
+        margin-top: 15px;
+    }
+}
+
+#home button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background-color: #800020;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#home button:hover {
+    background-color: #b30077;
+}
+
+.about-content,
+.form-content,
+.team-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+}
+
+.about-content img {
+    max-width: 45%;
+    border-radius: 10px;
+}
+
+.about-content .text {
+    max-width: 45%;
+    text-align: left;
+}
+
+.images-content {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    width: 90%;
+}
+
+.images-content img {
+    width: 45%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.15);
+}
+
+.textarea-box {
+    width: 60%;
+    margin: auto;
+    text-align: left;
+}
+
+.textarea-box textarea {
+    width: 100%;
+    height: 150px;
+    padding: 15px;
+    font-size: 1em;
+    border: 1px solid #333;
+    border-radius: 5px;
+}
+
+/* Hasil */
+.textarea-box .green-box {
+    margin-top: 15px;
+    height: 50px;
+    background-color: #00ff00;
+    border-radius: 5px;
+}
+
+.team-content {
+    flex-wrap: wrap;
+    gap: 15px;
+    max-width: 1200px;
+    width: 90%;
+}
+
+.team-member {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-radius: 5px;
+    width: 45%;
+    max-width: 45%;
+    background: rgba(221, 198, 198, 0.8);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.team-member:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.02);
+}
+
+.team-member img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+    border: 2px solid #800020;
+}
+
+@media (max-width: 768px) {
+    .team-member {
+        width: 90%;
+        max-width: 100%;
+    }
+}

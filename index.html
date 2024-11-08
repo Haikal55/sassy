@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>SASSY</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav id="navbar">
+    <div class="logo">
+      <img src="assets/img/logo.png" alt="Logo Image">
+    </div>
+    <div class="navbar">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#app">App</a>
+      <a href="#workcloud">WorkCloud</a>
+      <a href="#team">Team</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </div>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home">
+    <h2>Welcome To<br>Sepora Sentiment Analysis System</h2>
+    <button type="button" onclick="location.href='#about'">Let's Go</button>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="about-content">
+      <div class="text">
+        <h2>About Us</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua.</p>
+        <p style="color: #333; margin-top: 10px;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse
+          doloremque vero eos, eius porro totam aliquam alias voluptatem temporibus magnam, ratione nostrum dolorum
+          exercitationem? Omnis assumenda eaque aperiam dolorem animi.</p>
+      </div>
+      <img src="assets/img/Philosophy.png" alt="Placeholder for About Section Image">
+    </div>
+  </section>
+
+  <!-- Form Section -->
+  <section id="app">
+    <h2>App</h2>
+    <div class="form-content">
+      <div class="textarea-box">
+        <textarea placeholder="Your message..."></textarea>
+        <div class="green-box"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Images Section -->
+  <section id="workcloud">
+    <h2>WorkCloud</h2>
+    <div class="images-content">
+      <img src="https://ivosights.com/images/news/944499667220230124041630_1200_800.webp" alt="WorkCloud1">
+      <img src="https://ivosights.com/images/news/944499667220230124041630_1200_800.webp" alt="WorkCloud2">
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section id="team">
+    <h2>Meet Our Team</h2>
+    <div class="team-content">
+      <div class="team-member">
+        <img src="https://via.placeholder.com/60" alt="Bob Brown">
+        <div>
+          <h4>Bob Brown</h4>
+          <p>Caltech</p>
+        </div>
+      </div>
+      <div class="team-member">
+        <img src="https://via.placeholder.com/60" alt="Bob Brown">
+        <div>
+          <h4>Bob Brown</h4>
+          <p>Caltech</p>
+        </div>
+      </div>
+      <div class="team-member">
+        <img src="https://via.placeholder.com/60" alt="Bob Brown">
+        <div>
+          <h4>Bob Brown</h4>
+          <p>Caltech</p>
+        </div>
+      </div>
+      <div class="team-member">
+        <img src="https://via.placeholder.com/60" alt="Bob Brown">
+        <div>
+          <h4>Bob Brown</h4>
+          <p>Caltech</p>
+        </div>
+      </div>
+      <div class="team-member">
+        <img src="https://via.placeholder.com/60" alt="Bob Brown">
+        <div>
+          <h4>Bob Brown</h4>
+          <p>Caltech</p>
+        </div>
+      </div>
+      <div class="team-member">
+        <img src="https://via.placeholder.com/60" alt="Bob Brown">
+        <div>
+          <h4>Bob Brown</h4>
+          <p>Caltech</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    function toggleMenu() {
+      const navbar = document.querySelector('.navbar');
+      navbar.classList.toggle('active');
+      const hamburger = document.querySelector('.hamburger');
+      hamburger.classList.toggle('active');
+    }
+
+    document.addEventListener('click', function (event) {
+      const navbar = document.querySelector('.navbar');
+      const hamburger = document.querySelector('.hamburger');
+      if (!navbar.contains(event.target) && !hamburger.contains(event.target)) {
+        navbar.classList.remove('active');
+        hamburger.classList.remove('active');
+      }
+    });
+  </script>
+</body>
+</html>
